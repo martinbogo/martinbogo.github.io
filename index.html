@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>I Got U App Studio</title>
+<meta name="description" content="Small, carefully made apps for the things you wear and carry.">
+<link rel="icon" href="img/badge-studio.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<style>
+  :root { --bg:#fbfbfd; --fg:#1d1d1f; --muted:#6e6e73; --rule:#e3e3e6;
+          --card:#fff; --accent:#b3005e; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#131316; --fg:#f2f2f4; --muted:#a1a1a8; --rule:#2c2c31;
+            --card:#1b1b1f; --accent:#ff5fa8; }
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg);
+         font:17px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+         -webkit-text-size-adjust:100%; }
+  .hero { width:100%; aspect-ratio:16/9; max-height:60vh; object-fit:cover; display:block; }
+  .wrap { max-width:44rem; margin:0 auto; padding:2.5rem 1rem 4rem; }
+  h1 { font-size:2rem; margin:0 0 .4rem; letter-spacing:-.02em; }
+  .tag { color:var(--muted); margin:0 0 2.5rem; }
+  .app { display:flex; gap:1.25rem; align-items:flex-start; background:var(--card);
+         border:1px solid var(--rule); border-radius:16px; padding:1.25rem; }
+  .app + .app { margin-top:1rem; }
+  .app img { width:88px; height:88px; border-radius:20px; flex:none; }
+  .app h2 { font-size:1.3rem; margin:0 0 .25rem; }
+  .app p { margin:0 0 .9rem; }
+  .links { display:flex; flex-wrap:wrap; gap:.5rem; }
+  .links a { display:inline-block; padding:.45rem .9rem; border-radius:999px;
+             border:1px solid var(--rule); color:var(--fg); text-decoration:none;
+             font-size:.95rem; }
+  .links a.primary { background:var(--accent); border-color:var(--accent); color:#fff; }
+  footer { margin-top:3.5rem; padding-top:1.25rem; border-top:1px solid var(--rule);
+           color:var(--muted); font-size:.9rem; }
+  footer a { color:var(--accent); }
+  @media (max-width:30rem) { .app { flex-direction:column; } }
+</style>
+</head>
+<body>
+<img class="hero" src="img/header.jpg" alt="Four round LED badges showing portraits, beside the words I Got U App Studio">
+<div class="wrap">
+  <h1>I Got U App Studio</h1>
+  <p class="tag">Small, carefully made apps for the things you wear and carry.</p>
+
+  <div class="app">
+    <img src="img/badge-studio.png" alt="">
+    <div>
+      <h2>Badge Studio</h2>
+      <p>Photos, GIFs, video, slideshows and scrolling text on your round Bluetooth LED badge.</p>
+      <div class="links">
+        <a class="primary" href="https://play.google.com/store/apps/details?id=com.martinbogo.badgestudio">Google Play</a>
+        <a href="https://testflight.apple.com/join/g2HtWffq">iPhone beta</a>
+        <a href="https://www.igotu.com/badgestudio">Guide and support</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="app">
+    <img src="img/blinkenbadge.png" alt="">
+    <div>
+      <h2>BlinkenBadge</h2>
+      <p>Pixel art and animation for 44 by 11 LED name badges, over USB or Bluetooth. For Mac, Windows and Linux.</p>
+      <div class="links">
+        <a class="primary" href="https://github.com/martinbogo/BlinkenBadge/releases/latest">Download</a>
+        <a href="https://github.com/martinbogo/BlinkenBadge">GitHub</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <a href="mailto:martinbogo@igotu.com">martinbogo@igotu.com</a><br>
+    &copy; 2026 I Got U App Studio
+  </footer>
+</div>
+</body>
+</html>
