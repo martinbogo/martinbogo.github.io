@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark light">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+<title>Badge Studio Licences</title>
+<style>
+  :root { --ground:#0a0a0c; --text:#f2f2f4; --muted:#8e919b; --hairline:rgba(255,255,255,.08); --accent:#ff6a3d; color-scheme: dark; }
+  @media (prefers-color-scheme: light) {
+    :root { --ground:#ececE8; --text:#121316; --muted:#62656e; --hairline:rgba(0,0,0,.08); --accent:#c2410c; color-scheme: light; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--ground); color: var(--text); font: 15px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
+  h1 { font-size: 28px; letter-spacing: -.4px; margin: 0 0 24px; }
+  h2 { font: 500 11px/1.2 ui-monospace, Menlo, Consolas, monospace; letter-spacing: 1.4px; text-transform: uppercase; color: var(--muted); margin: 36px 0 10px; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th, td { text-align: left; padding: 8px 8px 8px 0; border-top: 1px solid var(--hairline); vertical-align: top; }
+  th { font-weight: 600; }
+  td.v { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 13px; white-space: nowrap; }
+  a { color: var(--accent); }
+  p { margin: 0 0 12px; }
+  .wrap { overflow-x: auto; }
+</style>
+</head>
+<body>
+<main>
+<h1>Licences</h1>
+
+<h2>Video and still decoding</h2>
+<p>Files that Chrome cannot open itself are decoded by <strong>FFmpeg</strong>, compiled to WebAssembly by ffmpeg.wasm and loaded only when needed (<code>ffmpeg-core.wasm</code>). This build is distributed under the <a href="licenses/gpl-2.0.txt">GNU General Public License, version 2 or later</a>, because it includes x264 and x265. It is unmodified.</p>
+<div class="wrap"><table>
+<tr><th>Component</th><th>Version</th><th>Licence</th><th>Source</th></tr>
+<tr><td>FFmpeg</td><td class="v">n5.1.4</td><td>LGPL-2.1+, GPL-2.0+ as built</td><td><a href="https://github.com/FFmpeg/FFmpeg/tree/n5.1.4">FFmpeg/FFmpeg</a></td></tr>
+<tr><td>ffmpeg.wasm core build</td><td class="v">0.12.10</td><td>GPL-2.0+</td><td><a href="https://github.com/ffmpegwasm/ffmpeg.wasm/tree/v0.12.10">ffmpegwasm/ffmpeg.wasm</a></td></tr>
+<tr><td>x264</td><td class="v">4-cores</td><td>GPL-2.0+</td><td><a href="https://github.com/ffmpegwasm/x264/tree/4-cores">ffmpegwasm/x264</a></td></tr>
+<tr><td>x265</td><td class="v">3.4</td><td>GPL-2.0+</td><td><a href="https://github.com/ffmpegwasm/x265/tree/3.4">ffmpegwasm/x265</a></td></tr>
+<tr><td>libvpx</td><td class="v">v1.13.1</td><td>BSD-3-Clause</td><td><a href="https://github.com/ffmpegwasm/libvpx/tree/v1.13.1">ffmpegwasm/libvpx</a></td></tr>
+<tr><td>LAME</td><td class="v">master</td><td>LGPL-2.0+</td><td><a href="https://github.com/ffmpegwasm/lame">ffmpegwasm/lame</a></td></tr>
+<tr><td>libogg</td><td class="v">v1.3.4</td><td>BSD-3-Clause</td><td><a href="https://github.com/ffmpegwasm/Ogg/tree/v1.3.4">ffmpegwasm/Ogg</a></td></tr>
+<tr><td>libtheora</td><td class="v">v1.1.1</td><td>BSD-3-Clause</td><td><a href="https://github.com/ffmpegwasm/theora/tree/v1.1.1">ffmpegwasm/theora</a></td></tr>
+<tr><td>Opus</td><td class="v">v1.3.1</td><td>BSD-3-Clause</td><td><a href="https://github.com/ffmpegwasm/opus/tree/v1.3.1">ffmpegwasm/opus</a></td></tr>
+<tr><td>libvorbis</td><td class="v">v1.3.3</td><td>BSD-3-Clause</td><td><a href="https://github.com/ffmpegwasm/vorbis/tree/v1.3.3">ffmpegwasm/vorbis</a></td></tr>
+<tr><td>zlib</td><td class="v">v1.2.11</td><td>Zlib</td><td><a href="https://github.com/ffmpegwasm/zlib/tree/v1.2.11">ffmpegwasm/zlib</a></td></tr>
+<tr><td>libwebp</td><td class="v">v1.3.2</td><td>BSD-3-Clause</td><td><a href="https://github.com/ffmpegwasm/libwebp/tree/v1.3.2">ffmpegwasm/libwebp</a></td></tr>
+<tr><td>FreeType</td><td class="v">VER-2-10-4</td><td>FTL or GPL-2.0+</td><td><a href="https://github.com/ffmpegwasm/freetype2/tree/VER-2-10-4">ffmpegwasm/freetype2</a></td></tr>
+<tr><td>FriBidi</td><td class="v">v1.0.9</td><td>LGPL-2.1+</td><td><a href="https://github.com/fribidi/fribidi/tree/v1.0.9">fribidi/fribidi</a></td></tr>
+<tr><td>HarfBuzz</td><td class="v">5.2.0</td><td>MIT</td><td><a href="https://github.com/harfbuzz/harfbuzz/tree/5.2.0">harfbuzz/harfbuzz</a></td></tr>
+<tr><td>libass</td><td class="v">0.15.0</td><td>ISC</td><td><a href="https://github.com/libass/libass/tree/0.15.0">libass/libass</a></td></tr>
+<tr><td>zimg</td><td class="v">release-3.0.5</td><td>WTFPL</td><td><a href="https://github.com/sekrit-twc/zimg/tree/release-3.0.5">sekrit-twc/zimg</a></td></tr>
+<tr><td>@ffmpeg/ffmpeg</td><td class="v">0.12.15</td><td><a href="licenses/ffmpeg.wasm-MIT.txt">MIT</a></td><td><a href="https://github.com/ffmpegwasm/ffmpeg.wasm">ffmpegwasm/ffmpeg.wasm</a></td></tr>
+</table></div>
+
+<h2>Source offer</h2>
+<p>The complete corresponding source code of the FFmpeg build above is at the links in the table. In addition, for at least three years from the date this site last distributed it, anyone may ask for a complete machine-readable copy of that source code, for no more than the cost of providing it, by writing to <a href="mailto:martinbogo@igotu.com">martinbogo@igotu.com</a>.</p>
+
+<h2>HEIC and HEIF pictures</h2>
+<div class="wrap"><table>
+<tr><th>Component</th><th>Version</th><th>Licence</th><th>Source</th></tr>
+<tr><td>libheif, as libheif-js</td><td class="v">1.23.5</td><td><a href="licenses/lgpl-3.0.txt">LGPL-3.0</a> (with the <a href="licenses/gpl-3.0.txt">GPL-3.0</a> it builds on); <a href="licenses/libheif-COPYING.txt">libheif's notice</a>, <a href="licenses/libheif-js-LICENSE.txt">libheif-js's notice</a></td><td><a href="https://github.com/strukturag/libheif">strukturag/libheif</a>, <a href="https://github.com/catdad-experiments/libheif-js/tree/v1.23.5">catdad-experiments/libheif-js</a></td></tr>
+</table></div>
+<p>libheif is loaded as a separate file and can be replaced with a modified version.</p>
+
+<h2>Interface</h2>
+<div class="wrap"><table>
+<tr><th>Component</th><th>Version</th><th>Licence</th></tr>
+<tr><td>React, React DOM</td><td class="v">19.3.1</td><td><a href="licenses/react-MIT.txt">MIT</a></td></tr>
+<tr><td>Inter</td><td class="v"></td><td><a href="licenses/OFL-Inter.txt">SIL Open Font License 1.1</a></td></tr>
+<tr><td>Inter Tight</td><td class="v"></td><td><a href="licenses/OFL-InterTight.txt">SIL Open Font License 1.1</a></td></tr>
+<tr><td>JetBrains Mono</td><td class="v"></td><td><a href="licenses/OFL-JetBrainsMono.txt">SIL Open Font License 1.1</a></td></tr>
+</table></div>
+</main>
+</body>
+</html>
