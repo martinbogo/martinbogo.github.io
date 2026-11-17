@@ -4,13 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="dark light">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+<script src="theme.js"></script>
 <title>Badge Studio Licences</title>
 <style>
   :root { --ground:#0a0a0c; --text:#f2f2f4; --muted:#8e919b; --hairline:rgba(255,255,255,.08); --accent:#ff6a3d; color-scheme: dark; }
   @media (prefers-color-scheme: light) {
-    :root { --ground:#ececE8; --text:#121316; --muted:#62656e; --hairline:rgba(0,0,0,.08); --accent:#c2410c; color-scheme: light; }
+    :root:not([data-theme="dark"]) { --ground:#ececE8; --text:#121316; --muted:#62656e; --hairline:rgba(0,0,0,.08); --accent:#c2410c; color-scheme: light; }
   }
+  :root[data-theme="light"] { --ground:#ececE8; --text:#121316; --muted:#62656e; --hairline:rgba(0,0,0,.08); --accent:#c2410c; color-scheme: light; }
   * { box-sizing: border-box; }
   body { margin: 0; background: var(--ground); color: var(--text); font: 15px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif; }
   main { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
